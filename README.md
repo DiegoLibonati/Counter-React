@@ -28,7 +28,7 @@ I made a web application that serves as a counter, basically we have 3 buttons. 
 
 ## Portfolio Link
 
-`https://diegolibonati.github.io/DiegoLibonatiWeb/#/projects?q=Counter%20app%20page`
+`https://diegolibonati.github.io/DiegoLibonatiWeb/#/projects?q=Counter%20App%20Page`
 
 ## Video
 
