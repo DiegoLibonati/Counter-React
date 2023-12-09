@@ -16,20 +16,6 @@ I made a web application that serves as a counter, basically we have 3 buttons. 
 1. React JS
 2. CSS3
 
-## Galery
-
-![Counter-App-Page](https://raw.githubusercontent.com/DiegoLibonati/DiegoLibonatiWeb/main/data/projects/React/Imagenes/reactcounter-0.jpg)
-
-![Counter-App-Page](https://raw.githubusercontent.com/DiegoLibonati/DiegoLibonatiWeb/main/data/projects/React/Imagenes/reactcounter-1.jpg)
-
-![Counter-App-Page](https://raw.githubusercontent.com/DiegoLibonati/DiegoLibonatiWeb/main/data/projects/React/Imagenes/reactcounter-2.jpg)
-
-![Counter-App-Page](https://raw.githubusercontent.com/DiegoLibonati/DiegoLibonatiWeb/main/data/projects/React/Imagenes/reactcounter-3.jpg)
-
-## Portfolio Link
-
-`https://diegolibonati.github.io/DiegoLibonatiWeb/#/projects?q=Counter%20App%20Page`
-
 ## Video
 
 https://user-images.githubusercontent.com/99032604/199360962-be7f945a-a287-42ad-88bf-16c08a995441.mp4
