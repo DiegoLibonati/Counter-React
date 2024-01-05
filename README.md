@@ -14,7 +14,8 @@ I made a web application that serves as a counter, basically we have 3 buttons. 
 ## Technologies used
 
 1. React JS
-2. CSS3
+2. Typescript
+3. CSS3
 
 ## Video
 
@@ -22,34 +23,46 @@ https://user-images.githubusercontent.com/99032604/199360962-be7f945a-a287-42ad-
 
 ## Documentation
 
-In the `Main.jsx` component we are going to have a state called `value` that will be the one whose value will be added, subtracted or subtracted. It has a default value that arrives by props. The `handleIncrease()` function will add 1 to the `value` state each time it is called, the `handleReset()` function will reset the value of `value` to 0 each time it is called and the `handleDecrease()` function will subtract 1 from `value` each time it is called. Also the `checkColor()` function will check the value of `value` and depending on whether it is positive, negative or neutral will assign a different color to that element:
+In the `Main.tsx` component we are going to have a state called `value` that will be the one whose value will be added, subtracted or subtracted. It has a default value that arrives by props. The `handleIncrease()` function will add 1 to the `value` state each time it is called, the `handleReset()` function will reset the value of `value` to 0 each time it is called and the `handleDecrease()` function will subtract 1 from `value` each time it is called. Also the `checkColor()` function will check the value of `value` and depending on whether it is positive, negative or neutral will assign a different color to that element:
 
 ```
-const [value, setValue] = useState(props.value)
+const [valueCounter, setValueCounter] = useState<number>(value);
 
-const handleIncrease = (e) => {
-    setValue(value + 1)
-    checkColor(value + 1, e.target.parentElement.parentElement.children[1])
+const handleIncrease: React.MouseEventHandler<HTMLButtonElement> = (e) => {
+const target = e.target as HTMLElement;
+setValueCounter(valueCounter + 1);
+checkColor(
+    valueCounter + 1,
+    target.parentElement!.parentElement!.children[1] as HTMLElement
+);
+};
+
+const handleReset: React.MouseEventHandler<HTMLButtonElement> = (e) => {
+const target = e.target as HTMLElement;
+const children = target.parentElement!.parentElement!
+    .children[1] as HTMLElement;
+setValueCounter(0);
+children.style.color = "white";
+};
+
+const handleDecrease: React.MouseEventHandler<HTMLButtonElement> = (e) => {
+const target = e.target as HTMLElement;
+setValueCounter(valueCounter - 1);
+checkColor(
+    valueCounter - 1,
+    target.parentElement!.parentElement!.children[1] as HTMLElement
+);
+};
+
+const checkColor = (n: number, valueObject: HTMLElement): void => {
+if (n < 0) {
+    valueObject.style.color = "red";
+    return;
+} else if (n > 0) {
+    valueObject.style.color = "green";
+    return;
 }
-
-const handleReset = (e) => {
-    setValue(0)
-    e.target.parentElement.parentElement.children[1].style.color = "white";
-}
-
-const handleDecrease = (e) => {
-    setValue(value - 1)
-    checkColor(value - 1, e.target.parentElement.parentElement.children[1])
-}
-
-const checkColor = (n, valueObject) => {
-
-    if (n < 0){
-        valueObject.style.color = "red";
-    } else if (n > 0){
-        valueObject.style.color = "green";
-    } else if (n === 0){
-        valueObject.style.color = "white";
-    }
-}
+valueObject.style.color = "white";
+return;
+};
 ```
