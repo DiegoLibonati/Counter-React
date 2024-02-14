@@ -17,6 +17,10 @@ I made a web application that serves as a counter, basically we have 3 buttons. 
 2. Typescript
 3. CSS3
 
+## Portfolio Link
+
+[`https://www.diegolibonati.com.ar/#/project/102`](https://www.diegolibonati.com.ar/#/project/102)
+
 ## Video
 
 https://user-images.githubusercontent.com/99032604/199360962-be7f945a-a287-42ad-88bf-16c08a995441.mp4
