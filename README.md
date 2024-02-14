@@ -23,7 +23,7 @@ I made a web application that serves as a counter, basically we have 3 buttons. 
 
 ## Video
 
-https://user-images.githubusercontent.com/99032604/199360962-be7f945a-a287-42ad-88bf-16c08a995441.mp4
+https://github.com/DiegoLibonati/Counter-App-Page/assets/99032604/42c39994-9e70-431b-8954-0c0c4ad67e4c
 
 ## Documentation
 
