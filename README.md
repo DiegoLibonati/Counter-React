@@ -1,4 +1,4 @@
-# Counter-App-Page
+# Counter React
 
 ## Getting Started
 
@@ -19,7 +19,7 @@ I made a web application that serves as a counter, basically we have 3 buttons. 
 
 ## Portfolio Link
 
-[`https://www.diegolibonati.com.ar/#/project/103`](https://www.diegolibonati.com.ar/#/project/103)
+[`https://www.diegolibonati.com.ar/#/project/Counter-React`](https://www.diegolibonati.com.ar/#/project/Counter-React)
 
 ## Video
 
