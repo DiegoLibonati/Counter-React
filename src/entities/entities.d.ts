@@ -1,6 +1,6 @@
 // ##### TYPES #####
-export type MainProps = {
-  value: number;
-};
 
 // ##### INTERFACES #####
+export interface MainProps {
+  value: number;
+}
