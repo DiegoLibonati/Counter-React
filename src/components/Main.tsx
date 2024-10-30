@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from "react";
+
 import { MainProps } from "../entities/entities";
 
 export const Main = ({ value }: MainProps): JSX.Element => {
@@ -7,7 +8,6 @@ export const Main = ({ value }: MainProps): JSX.Element => {
 
   const handleIncrease: React.MouseEventHandler<HTMLButtonElement> = (e) => {
     setValueCounter(valueCounter + 1);
-
   };
 
   const handleReset: React.MouseEventHandler<HTMLButtonElement> = (e) => {
@@ -16,7 +16,6 @@ export const Main = ({ value }: MainProps): JSX.Element => {
 
   const handleDecrease: React.MouseEventHandler<HTMLButtonElement> = (e) => {
     setValueCounter(valueCounter - 1);
-
   };
 
   const checkColor = (): void => {
@@ -33,7 +32,7 @@ export const Main = ({ value }: MainProps): JSX.Element => {
 
   useEffect(() => {
     checkColor();
-  }, [valueCounter])
+  }, [valueCounter]);
 
   return (
     <main>
