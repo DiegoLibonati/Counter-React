@@ -1,6 +1,8 @@
 import { useEffect, useRef, useState } from "react";
 
-import { MainProps } from "../entities/entities";
+export interface MainProps {
+  value: number;
+}
 
 export const Main = ({ value }: MainProps): JSX.Element => {
   const [valueCounter, setValueCounter] = useState<number>(value);

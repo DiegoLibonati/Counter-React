@@ -35,7 +35,6 @@ In the `Main.tsx` component we are going to have a state called `value` that wil
 
   const handleIncrease: React.MouseEventHandler<HTMLButtonElement> = (e) => {
     setValueCounter(valueCounter + 1);
-
   };
 
   const handleReset: React.MouseEventHandler<HTMLButtonElement> = (e) => {
@@ -44,7 +43,6 @@ In the `Main.tsx` component we are going to have a state called `value` that wil
 
   const handleDecrease: React.MouseEventHandler<HTMLButtonElement> = (e) => {
     setValueCounter(valueCounter - 1);
-
   };
 
   const checkColor = (): void => {
@@ -55,11 +53,11 @@ In the `Main.tsx` component we are going to have a state called `value` that wil
       valueRef.current!.style.color = "green";
       return;
     }
-    valueRef.current!.style.color = "black";
+    valueRef.current!.style.color = "#FFE4C9";
     return;
   };
 
   useEffect(() => {
     checkColor();
-  }, [valueCounter])
+  }, [valueCounter]);
 ```
