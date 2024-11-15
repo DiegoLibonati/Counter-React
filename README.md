@@ -52,7 +52,7 @@ https://github.com/DiegoLibonati/Counter-App-Page/assets/99032604/42c39994-9e70-
 
 ## Testing
 
-1. Join to the correct path of the clone and join to: `bookstore-app`
+1. Join to the correct path of the clone
 2. Execute: `yarn install`
 3. Execute: `yarn test`
 
