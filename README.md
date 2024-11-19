@@ -22,13 +22,13 @@ I made a web application that serves as a counter, basically we have 3 buttons. 
 #### Dependencies
 
 ```
-"@types/jest": "^29.5.13",
-"@types/react": "^18.3.11",
-"@types/react-dom": "^18.3.1",
-"@types/node": "^20.10.6",
-"react": "^18.2.0",
-"react-dom": "^18.2.0",
-"react-scripts": "5.0.1",
+"@types/jest": "^29.5.13"
+"@types/react": "^18.3.11"
+"@types/react-dom": "^18.3.1"
+"@types/node": "^20.10.6"
+"react": "^18.2.0"
+"react-dom": "^18.2.0"
+"react-scripts": "5.0.1"
 "web-vitals": "^2.1.4"
 ```
 
