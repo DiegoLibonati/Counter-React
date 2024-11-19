@@ -35,11 +35,15 @@ I made a web application that serves as a counter, basically we have 3 buttons. 
 #### devDependencies
 
 ```
-"@testing-library/dom": "^10.4.0",
-"@testing-library/jest-dom": "^6.6.2",
-"@testing-library/react": "^16.0.1",
-"@testing-library/user-event": "^14.5.2",
+"@testing-library/dom": "^10.4.0"
+"@testing-library/jest-dom": "^6.6.2"
+"@testing-library/react": "^16.0.1"
+"@testing-library/user-event": "^14.5.2"
 "typescript": "^5.3.3"
+"jest": "^29.7.0"
+"jest-environment-jsdom": "^29.7.0"
+"jest-fixed-jsdom": "^0.0.9"
+"ts-jest": "^29.2.5"
 ```
 
 ## Portfolio Link
