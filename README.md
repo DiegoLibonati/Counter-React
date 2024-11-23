@@ -4,8 +4,8 @@
 
 1. Clone the repository
 2. Join to the correct path of the clone
-3. Install node_modules with `npm install` or `yarn install`
-4. Use `npm start` or `yarn start` to run the app page
+3. Execute: `yarn install` or `npm install`
+4. Execute: `yarn start` or `npm start` and enjoy!
 
 ## Description
 
@@ -57,42 +57,4 @@ https://github.com/DiegoLibonati/Counter-App-Page/assets/99032604/42c39994-9e70-
 ## Testing
 
 1. Join to the correct path of the clone
-2. Execute: `yarn install`
-3. Execute: `yarn test`
-
-## Documentation
-
-In the `Main.tsx` component we are going to have a state called `value` that will be the one whose value will be added, subtracted or subtracted. It has a default value that arrives by props. The `handleIncrease()` function will add 1 to the `value` state each time it is called, the `handleReset()` function will reset the value of `value` to 0 each time it is called and the `handleDecrease()` function will subtract 1 from `value` each time it is called. Also the `checkColor()` function will check the value of `value` and depending on whether it is positive, negative or neutral will assign a different color to that element:
-
-```
-  const [valueCounter, setValueCounter] = useState<number>(value);
-  const valueRef = useRef<HTMLHeadingElement | null>(null);
-
-  const handleIncrease: React.MouseEventHandler<HTMLButtonElement> = (e) => {
-    setValueCounter(valueCounter + 1);
-  };
-
-  const handleReset: React.MouseEventHandler<HTMLButtonElement> = (e) => {
-    setValueCounter(0);
-  };
-
-  const handleDecrease: React.MouseEventHandler<HTMLButtonElement> = (e) => {
-    setValueCounter(valueCounter - 1);
-  };
-
-  const checkColor = (): void => {
-    if (valueCounter < 0) {
-      valueRef.current!.style.color = "red";
-      return;
-    } else if (valueCounter > 0) {
-      valueRef.current!.style.color = "green";
-      return;
-    }
-    valueRef.current!.style.color = "#FFE4C9";
-    return;
-  };
-
-  useEffect(() => {
-    checkColor();
-  }, [valueCounter]);
-```
+2. Execute: `yarn test` or `npm test`
