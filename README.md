@@ -42,7 +42,6 @@ I made a web application that serves as a counter, basically we have 3 buttons. 
 "typescript": "^5.3.3"
 "jest": "^29.7.0"
 "jest-environment-jsdom": "^29.7.0"
-"jest-fixed-jsdom": "^0.0.9"
 "ts-jest": "^29.2.5"
 ```
 
