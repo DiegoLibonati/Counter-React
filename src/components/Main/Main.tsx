@@ -1,6 +1,8 @@
 import { useEffect, useRef, useState } from "react";
 
-export interface MainProps {
+import { rootCss } from "../../constants/configCss";
+
+interface MainProps {
   value: number;
 }
 
@@ -22,13 +24,13 @@ export const Main = ({ value }: MainProps): JSX.Element => {
 
   const checkColor = (): void => {
     if (valueCounter < 0) {
-      valueRef.current!.style.color = "red";
+      valueRef.current!.style.color = rootCss.colors.red;
       return;
     } else if (valueCounter > 0) {
-      valueRef.current!.style.color = "green";
+      valueRef.current!.style.color = rootCss.colors.green;
       return;
     }
-    valueRef.current!.style.color = "#FFE4C9";
+    valueRef.current!.style.color = rootCss.colors.primary;
     return;
   };
 
@@ -38,18 +40,26 @@ export const Main = ({ value }: MainProps): JSX.Element => {
 
   return (
     <main>
-      <section className="section_container">
-        <article className="section_container_article">
+      <section className="counter">
+        <article className="counter__article">
           <h1>COUNTER APP</h1>
           <h2 ref={valueRef}>{valueCounter}</h2>
-          <div className="section_container_article_btns">
-            <button type="button" onClick={handleIncrease}>
+          <div className="counter__article__btns">
+            <button
+              type="button"
+              aria-label="increase"
+              onClick={handleIncrease}
+            >
               INCREASE
             </button>
-            <button type="button" onClick={handleReset}>
+            <button type="button" aria-label="reset" onClick={handleReset}>
               RESET
             </button>
-            <button type="button" onClick={handleDecrease}>
+            <button
+              type="button"
+              aria-label="decrease"
+              onClick={handleDecrease}
+            >
               DECREASE
             </button>
           </div>
