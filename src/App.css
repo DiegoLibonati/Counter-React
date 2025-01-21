@@ -1,4 +1,4 @@
-.counter {
+.counter-wrapper {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -7,7 +7,7 @@
   background-color: var(--primary-color);
 }
 
-.counter__article {
+.counter {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
@@ -18,19 +18,19 @@
   border-radius: 1rem;
 }
 
-.counter__article h1 {
+.counter__title {
   font-size: 5rem;
   text-align: center;
   color: var(--primary-color);
 }
 
-.counter__article h2 {
+.counter__value {
   font-size: 4rem;
   color: var(--primary-color);
   transition: color 1s;
 }
 
-.counter__article__btns {
+.counter__btns {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
@@ -38,7 +38,7 @@
   width: 100%;
 }
 
-.counter__article__btns button {
+.counter__btn {
   padding: 1rem;
   font-size: 1.2rem;
   border-radius: 1rem;
@@ -49,28 +49,29 @@
   outline: none;
 }
 
-.counter__article__btns button:active {
+.counter__btn:active {
   transform: scale(0.8);
 }
 
 @media only screen and (min-width: 768px) {
-  .counter__article {
+  .counter {
     width: 70rem;
     height: 70rem;
   }
 
-  .counter__article h1 {
+  .counter__title {
     font-size: 7rem;
   }
 
-  .counter__article h2 {
+  .counter__value {
     font-size: 6rem;
   }
 
-  .counter__article__btns {
+  .counter__btns {
     width: 50rem;
   }
-  .counter__article__btns button {
+
+  .counter__btn {
     font-size: 2.5rem;
   }
 }

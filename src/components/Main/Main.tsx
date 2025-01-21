@@ -39,24 +39,33 @@ export const Main = ({ value }: MainProps): JSX.Element => {
   }, [valueCounter]);
 
   return (
-    <main>
-      <section className="counter">
-        <article className="counter__article">
-          <h1>COUNTER APP</h1>
-          <h2 ref={valueRef}>{valueCounter}</h2>
-          <div className="counter__article__btns">
+    <main className="main-app">
+      <section className="counter-wrapper">
+        <article className="counter">
+          <h1 className="counter__title">COUNTER APP</h1>
+          <h2 ref={valueRef} className="counter__value">
+            {valueCounter}
+          </h2>
+          <div className="counter__btns">
             <button
               type="button"
+              className="counter__btn counter__increase"
               aria-label="increase"
               onClick={handleIncrease}
             >
               INCREASE
             </button>
-            <button type="button" aria-label="reset" onClick={handleReset}>
+            <button
+              type="button"
+              className="counter__btn counter__reset"
+              aria-label="reset"
+              onClick={handleReset}
+            >
               RESET
             </button>
             <button
               type="button"
+              className="counter__btn counter__decrease"
               aria-label="decrease"
               onClick={handleDecrease}
             >
