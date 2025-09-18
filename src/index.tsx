@@ -1,8 +1,8 @@
 import ReactDOM from "react-dom/client";
 
-import CounterApp from "./App";
+import CounterApp from "@src/App";
 
-import "./index.css";
+import "@src/index.css";
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement

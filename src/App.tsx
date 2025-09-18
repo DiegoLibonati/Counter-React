@@ -1,6 +1,6 @@
-import { Main } from "./components/Main/Main";
+import { Main } from "@src/components/Main/Main";
 
-import "./App.css";
+import "@src/App.css";
 
 function CounterApp(): JSX.Element {
   return <Main value={0}></Main>;

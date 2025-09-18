@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 
-import { rootCss } from "../../constants/configCss";
+import { rootCss } from "@src/constants/configCss";
 
 interface MainProps {
   value: number;

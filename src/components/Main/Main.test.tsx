@@ -1,7 +1,7 @@
 import { screen, render } from "@testing-library/react";
 import user from "@testing-library/user-event";
 
-import { Main } from "./Main";
+import { Main } from "@src/components/Main/Main";
 
 const renderComponent = (): {
   container: HTMLElement;
