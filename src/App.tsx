@@ -1,9 +1,7 @@
-import { Main } from "@src/components/Main/Main";
+import { CounterPage } from "@src/pages/CounterPage/CounterPage";
 
-import "@src/App.css";
-
-function CounterApp(): JSX.Element {
-  return <Main value={0}></Main>;
+function App(): JSX.Element {
+  return <CounterPage value={0}></CounterPage>;
 }
 
-export default CounterApp;
+export default App;

@@ -1,12 +1,12 @@
 import { useEffect, useRef, useState } from "react";
 
-import { rootCss } from "@src/constants/configCss";
+import { CounterPageProps } from "@src/entities/props";
 
-interface MainProps {
-  value: number;
-}
+import { theme } from "@src/styles/theme";
 
-export const Main = ({ value }: MainProps): JSX.Element => {
+import "@src/pages/CounterPage/CounterPage.css";
+
+export const CounterPage = ({ value }: CounterPageProps): JSX.Element => {
   const [valueCounter, setValueCounter] = useState<number>(value);
   const valueRef = useRef<HTMLHeadingElement | null>(null);
 
@@ -24,13 +24,13 @@ export const Main = ({ value }: MainProps): JSX.Element => {
 
   const checkColor = (): void => {
     if (valueCounter < 0) {
-      valueRef.current!.style.color = rootCss.colors.red;
+      valueRef.current!.style.color = theme.colors.red;
       return;
     } else if (valueCounter > 0) {
-      valueRef.current!.style.color = rootCss.colors.green;
+      valueRef.current!.style.color = theme.colors.green;
       return;
     }
-    valueRef.current!.style.color = rootCss.colors.primary;
+    valueRef.current!.style.color = theme.colors.primary;
     return;
   };
 
@@ -39,7 +39,7 @@ export const Main = ({ value }: MainProps): JSX.Element => {
   }, [valueCounter]);
 
   return (
-    <main className="main-app">
+    <main className="main-counter">
       <section className="counter-wrapper">
         <article className="counter">
           <h1 className="counter__title">COUNTER APP</h1>

@@ -1,14 +1,14 @@
 import { screen, render } from "@testing-library/react";
 import user from "@testing-library/user-event";
 
-import { Main } from "@src/components/Main/Main";
+import { CounterPage } from "@src/pages/CounterPage/CounterPage";
 
 const renderComponent = (): {
   container: HTMLElement;
   initialValue: number;
 } => {
   const initialValue = 0;
-  const { container } = render(<Main value={initialValue}></Main>);
+  const { container } = render(<CounterPage value={initialValue}></CounterPage>);
 
   return {
     container: container,
@@ -16,7 +16,7 @@ const renderComponent = (): {
   };
 };
 
-describe("Main.tsx", () => {
+describe("CounterPage.tsx", () => {
   describe("General Tests.", () => {
     test("The title, the counter and the three buttons: increment, reset and decrement must be rendered in the application.", () => {
       const { initialValue } = renderComponent();
