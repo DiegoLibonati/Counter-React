@@ -37,18 +37,24 @@ const CounterPage = ({ value }: CounterPageProps) => {
   }, [valueCounter]);
 
   return (
-    <main className="main-counter">
+    <main className="main-counter" aria-label="Counter application">
       <section className="counter-wrapper">
         <article className="counter">
           <h1 className="counter__title">COUNTER APP</h1>
-          <h2 ref={valueRef} className="counter__value">
+          <h2
+            ref={valueRef}
+            className="counter__value"
+            aria-live="polite"
+            aria-atomic="true"
+            aria-label={`Current counter value: ${valueCounter}`}
+          >
             {valueCounter}
           </h2>
-          <div className="counter__btns">
+          <div className="counter__btns" role="group" aria-label="Counter controls">
             <button
               type="button"
               className="counter__btn counter__increase"
-              aria-label="increase"
+              aria-label="Increase counter by 1"
               onClick={handleIncrease}
             >
               INCREASE
@@ -56,7 +62,7 @@ const CounterPage = ({ value }: CounterPageProps) => {
             <button
               type="button"
               className="counter__btn counter__reset"
-              aria-label="reset"
+              aria-label="Reset counter to zero"
               onClick={handleReset}
             >
               RESET
@@ -64,7 +70,7 @@ const CounterPage = ({ value }: CounterPageProps) => {
             <button
               type="button"
               className="counter__btn counter__decrease"
-              aria-label="decrease"
+              aria-label="Decrease counter by 1"
               onClick={handleDecrease}
             >
               DECREASE
