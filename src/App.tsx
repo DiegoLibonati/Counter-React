@@ -1,6 +1,6 @@
-import { CounterPage } from "@src/pages/CounterPage/CounterPage";
+import CounterPage from "@/pages/CounterPage/CounterPage";
 
-function App(): JSX.Element {
+function App() {
   return <CounterPage value={0}></CounterPage>;
 }
 

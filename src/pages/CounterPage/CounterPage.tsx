@@ -1,36 +1,34 @@
 import { useEffect, useRef, useState } from "react";
 
-import { CounterPageProps } from "@src/entities/props";
+import { CounterPageProps } from "@/types/props";
 
-import { theme } from "@src/styles/theme";
+import "@/pages/CounterPage/CounterPage.css";
 
-import "@src/pages/CounterPage/CounterPage.css";
-
-export const CounterPage = ({ value }: CounterPageProps): JSX.Element => {
+const CounterPage = ({ value }: CounterPageProps) => {
   const [valueCounter, setValueCounter] = useState<number>(value);
   const valueRef = useRef<HTMLHeadingElement | null>(null);
 
-  const handleIncrease: React.MouseEventHandler<HTMLButtonElement> = (e) => {
+  const handleIncrease: React.MouseEventHandler<HTMLButtonElement> = () => {
     setValueCounter(valueCounter + 1);
   };
 
-  const handleReset: React.MouseEventHandler<HTMLButtonElement> = (e) => {
+  const handleReset: React.MouseEventHandler<HTMLButtonElement> = () => {
     setValueCounter(0);
   };
 
-  const handleDecrease: React.MouseEventHandler<HTMLButtonElement> = (e) => {
+  const handleDecrease: React.MouseEventHandler<HTMLButtonElement> = () => {
     setValueCounter(valueCounter - 1);
   };
 
   const checkColor = (): void => {
     if (valueCounter < 0) {
-      valueRef.current!.style.color = theme.colors.red;
+      valueRef.current!.style.color = "var(--color-red)";
       return;
     } else if (valueCounter > 0) {
-      valueRef.current!.style.color = theme.colors.green;
+      valueRef.current!.style.color = "var(--color-green)";
       return;
     }
-    valueRef.current!.style.color = theme.colors.primary;
+    valueRef.current!.style.color = "var(--color-black)";
     return;
   };
 
@@ -77,3 +75,5 @@ export const CounterPage = ({ value }: CounterPageProps): JSX.Element => {
     </main>
   );
 };
+
+export default CounterPage;
