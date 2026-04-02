@@ -1,16 +1,22 @@
 import { render, screen } from "@testing-library/react";
-
 import userEvent from "@testing-library/user-event";
+
+import type { CounterPageProps } from "@/types/props";
 
 import CounterPage from "@/pages/CounterPage/CounterPage";
 
 type RenderPage = {
   container: HTMLElement;
+  props: CounterPageProps;
 };
 
-const renderPage = (value = 0): RenderPage => {
-  const { container } = render(<CounterPage value={value} />);
-  return { container };
+const renderPage = (overrides?: Partial<CounterPageProps>): RenderPage => {
+  const props: CounterPageProps = {
+    value: 0,
+    ...overrides,
+  };
+  const { container } = render(<CounterPage {...props} />);
+  return { container, props };
 };
 
 describe("CounterPage", () => {
@@ -40,7 +46,7 @@ describe("CounterPage", () => {
   });
 
   it("should render the initial counter value from props", () => {
-    renderPage(5);
+    renderPage({ value: 5 });
     expect(screen.getByRole("heading", { name: "Current counter value: 5" })).toBeInTheDocument();
   });
 
@@ -69,7 +75,7 @@ describe("CounterPage", () => {
 
   it("should reset the counter to zero when clicking 'Reset counter to zero'", async () => {
     const user = userEvent.setup();
-    renderPage(10);
+    renderPage({ value: 10 });
 
     await user.click(screen.getByRole("button", { name: "Reset counter to zero" }));
 
