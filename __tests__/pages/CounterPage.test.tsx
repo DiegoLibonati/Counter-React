@@ -20,6 +20,10 @@ const renderPage = (overrides?: Partial<CounterPageProps>): RenderPage => {
 };
 
 describe("CounterPage", () => {
+  afterEach(() => {
+    jest.clearAllMocks();
+  });
+
   it("should render the main landmark with the correct aria-label", () => {
     renderPage();
     expect(screen.getByRole("main", { name: "Counter application" })).toBeInTheDocument();
