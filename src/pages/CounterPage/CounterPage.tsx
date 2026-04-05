@@ -1,11 +1,12 @@
 import { useEffect, useRef, useState } from "react";
 
-import { CounterPageProps } from "@/types/props";
+import type { JSX } from "react";
+import type { CounterPageProps } from "@/types/props";
 
 import "@/pages/CounterPage/CounterPage.css";
 
-const CounterPage = ({ value }: CounterPageProps) => {
-  const [valueCounter, setValueCounter] = useState<number>(value);
+const CounterPage = ({ value }: CounterPageProps): JSX.Element => {
+  const [valueCounter, setValueCounter] = useState(value);
   const valueRef = useRef<HTMLHeadingElement | null>(null);
 
   const handleIncrease: React.MouseEventHandler<HTMLButtonElement> = () => {

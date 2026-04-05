@@ -1,6 +1,8 @@
+import type { JSX } from "react";
+
 import CounterPage from "@/pages/CounterPage/CounterPage";
 
-function App() {
+function App(): JSX.Element {
   return <CounterPage value={0}></CounterPage>;
 }
 

@@ -5,10 +5,10 @@ import type { CounterPageProps } from "@/types/props";
 
 import CounterPage from "@/pages/CounterPage/CounterPage";
 
-type RenderPage = {
+interface RenderPage {
   container: HTMLElement;
   props: CounterPageProps;
-};
+}
 
 const renderPage = (overrides?: Partial<CounterPageProps>): RenderPage => {
   const props: CounterPageProps = {
