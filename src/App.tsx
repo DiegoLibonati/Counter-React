@@ -1,9 +1,9 @@
 import type { JSX } from "react";
 
-import CounterPage from "@/pages/CounterPage/CounterPage";
+import CountlyPage from "@/pages/CountlyPage/CountlyPage";
 
 function App(): JSX.Element {
-  return <CounterPage value={0}></CounterPage>;
+  return <CountlyPage value={0}></CountlyPage>;
 }
 
 export default App;

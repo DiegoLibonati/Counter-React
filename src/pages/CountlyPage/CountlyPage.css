@@ -1,4 +1,4 @@
-.counter-wrapper {
+.countly-wrapper {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -7,7 +7,7 @@
   background-color: var(--color-primary);
 }
 
-.counter {
+.countly {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
@@ -18,19 +18,19 @@
   border-radius: 0.625rem;
 }
 
-.counter__title {
+.countly__title {
   font-size: 3.125rem;
   text-align: center;
   color: var(--color-primary);
 }
 
-.counter__value {
+.countly__value {
   font-size: 2.5rem;
   color: var(--color-primary);
   transition: color 1s;
 }
 
-.counter__btns {
+.countly__btns {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
@@ -38,7 +38,7 @@
   width: 100%;
 }
 
-.counter__btn {
+.countly__btn {
   padding: 0.625rem;
   font-size: 0.75rem;
   border-radius: 0.625rem;
@@ -49,29 +49,29 @@
   outline: none;
 }
 
-.counter__btn:active {
+.countly__btn:active {
   transform: scale(0.8);
 }
 
 @media only screen and (min-width: 768px) {
-  .counter {
+  .countly {
     width: 43.75rem;
     height: 43.75rem;
   }
 
-  .counter__title {
+  .countly__title {
     font-size: 4.375rem;
   }
 
-  .counter__value {
+  .countly__value {
     font-size: 3.75rem;
   }
 
-  .counter__btns {
+  .countly__btns {
     width: 31.25rem;
   }
 
-  .counter__btn {
+  .countly__btn {
     font-size: 1.5625rem;
   }
 }

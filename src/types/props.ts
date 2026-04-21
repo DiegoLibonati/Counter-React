@@ -3,6 +3,6 @@
 //   className?: string;
 // }
 
-export interface CounterPageProps {
+export interface CountlyPageProps {
   value: number;
 }

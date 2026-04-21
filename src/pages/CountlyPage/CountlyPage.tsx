@@ -1,11 +1,11 @@
 import { useEffect, useRef, useState } from "react";
 
 import type { JSX } from "react";
-import type { CounterPageProps } from "@/types/props";
+import type { CountlyPageProps } from "@/types/props";
 
-import "@/pages/CounterPage/CounterPage.css";
+import "@/pages/CountlyPage/CountlyPage.css";
 
-const CounterPage = ({ value }: CounterPageProps): JSX.Element => {
+const CountlyPage = ({ value }: CountlyPageProps): JSX.Element => {
   const [valueCounter, setValueCounter] = useState(value);
   const valueRef = useRef<HTMLHeadingElement | null>(null);
 
@@ -38,23 +38,23 @@ const CounterPage = ({ value }: CounterPageProps): JSX.Element => {
   }, [valueCounter]);
 
   return (
-    <main className="main-counter" aria-label="Counter application">
-      <section className="counter-wrapper">
-        <article className="counter">
-          <h1 className="counter__title">COUNTER APP</h1>
+    <main className="main-countly" aria-label="Counter application">
+      <section className="countly-wrapper">
+        <article className="countly">
+          <h1 className="countly__title">Countly</h1>
           <h2
             ref={valueRef}
-            className="counter__value"
+            className="countly__value"
             aria-live="polite"
             aria-atomic="true"
             aria-label={`Current counter value: ${valueCounter}`}
           >
             {valueCounter}
           </h2>
-          <div className="counter__btns" role="group" aria-label="Counter controls">
+          <div className="countly__btns" role="group" aria-label="Counter controls">
             <button
               type="button"
-              className="counter__btn counter__increase"
+              className="countly__btn countly__increase"
               aria-label="Increase counter by 1"
               onClick={handleIncrease}
             >
@@ -62,7 +62,7 @@ const CounterPage = ({ value }: CounterPageProps): JSX.Element => {
             </button>
             <button
               type="button"
-              className="counter__btn counter__reset"
+              className="countly__btn countly__reset"
               aria-label="Reset counter to zero"
               onClick={handleReset}
             >
@@ -70,7 +70,7 @@ const CounterPage = ({ value }: CounterPageProps): JSX.Element => {
             </button>
             <button
               type="button"
-              className="counter__btn counter__decrease"
+              className="countly__btn countly__decrease"
               aria-label="Decrease counter by 1"
               onClick={handleDecrease}
             >
@@ -83,4 +83,4 @@ const CounterPage = ({ value }: CounterPageProps): JSX.Element => {
   );
 };
 
-export default CounterPage;
+export default CountlyPage;
