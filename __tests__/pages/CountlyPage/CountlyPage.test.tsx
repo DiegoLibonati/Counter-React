@@ -114,47 +114,53 @@ describe("CountlyPage", () => {
     it("should set black color when initial value is zero", () => {
       renderPage({ value: 0 });
       const valueHeading = screen.getByRole("heading", { level: 2 });
-      expect(valueHeading.style.color).toBe("var(--color-black)");
+      expect(valueHeading).toHaveStyle({ color: "var(--color-black)" });
     });
 
     it("should set green color when initial value is positive", () => {
       renderPage({ value: 3 });
       const valueHeading = screen.getByRole("heading", { level: 2 });
-      expect(valueHeading.style.color).toBe("var(--color-green)");
+      expect(valueHeading).toHaveStyle({ color: "var(--color-green)" });
     });
 
     it("should set red color when initial value is negative", () => {
       renderPage({ value: -3 });
       const valueHeading = screen.getByRole("heading", { level: 2 });
-      expect(valueHeading.style.color).toBe("var(--color-red)");
+      expect(valueHeading).toHaveStyle({ color: "var(--color-red)" });
     });
 
     it("should change to green color after incrementing from zero", async () => {
       const user = userEvent.setup();
       renderPage({ value: 0 });
       await user.click(screen.getByRole("button", { name: "Increase counter by 1" }));
-      expect(screen.getByRole("heading", { level: 2 }).style.color).toBe("var(--color-green)");
+      expect(screen.getByRole("heading", { level: 2 })).toHaveStyle({
+        color: "var(--color-green)",
+      });
     });
 
     it("should change to red color after decrementing below zero", async () => {
       const user = userEvent.setup();
       renderPage({ value: 0 });
       await user.click(screen.getByRole("button", { name: "Decrease counter by 1" }));
-      expect(screen.getByRole("heading", { level: 2 }).style.color).toBe("var(--color-red)");
+      expect(screen.getByRole("heading", { level: 2 })).toHaveStyle({ color: "var(--color-red)" });
     });
 
     it("should change to black color after resetting from a positive value", async () => {
       const user = userEvent.setup();
       renderPage({ value: 5 });
       await user.click(screen.getByRole("button", { name: "Reset counter to zero" }));
-      expect(screen.getByRole("heading", { level: 2 }).style.color).toBe("var(--color-black)");
+      expect(screen.getByRole("heading", { level: 2 })).toHaveStyle({
+        color: "var(--color-black)",
+      });
     });
 
     it("should change to black color after resetting from a negative value", async () => {
       const user = userEvent.setup();
       renderPage({ value: -5 });
       await user.click(screen.getByRole("button", { name: "Reset counter to zero" }));
-      expect(screen.getByRole("heading", { level: 2 }).style.color).toBe("var(--color-black)");
+      expect(screen.getByRole("heading", { level: 2 })).toHaveStyle({
+        color: "var(--color-black)",
+      });
     });
   });
 });
